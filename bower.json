@@ -2,5 +2,6 @@
   "name": "asp.net",
   "private": true,
   "dependencies": {
+    "vue": "v2.5.8"
   }
 }
