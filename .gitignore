@@ -262,3 +262,4 @@ __pycache__/
 /bower_components/*
 /Scripts/vue.js
 /Scripts/hello-module.js
+/Scripts/hello-vue-component.js
