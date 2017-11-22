@@ -5,6 +5,9 @@ Click here to learn more. https://go.microsoft.com/fwlink/?LinkId=518007
 */
 
 var gulp = require('gulp');
+var browserify = require('browserify');
+var babelify = require('babelify');
+var fs = require('fs');
 
 gulp.task('default', function () {
     // place code for your default task here
@@ -14,4 +17,9 @@ gulp.task('copy-files', function () {
     //vue
     gulp.src(['./bower_components/vue/dist/vue.js'])
         .pipe(gulp.dest('./Scripts/'));
+    //es6
+    browserify('./Vue/hello-module.js', { debug: !gulp.env.production })
+        .transform([babelify, { presets: ['es2015'] }])
+        .bundle()
+        .pipe(fs.createWriteStream("./Scripts/hello-module.js"));
 });
