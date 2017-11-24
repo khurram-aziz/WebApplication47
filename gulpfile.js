@@ -10,6 +10,9 @@ var babelify = require('babelify');
 var vueify = require('vueify')
 var fs = require('fs');
 
+//!gulp.env.productio
+var production = (process.env.NODE_ENV === 'production');
+
 gulp.task('default', function () {
     // place code for your default task here
 });
@@ -18,15 +21,22 @@ gulp.task('copy-files', function () {
     //vue
     gulp.src(['./bower_components/vue/dist/vue.js'])
         .pipe(gulp.dest('./Scripts/'));
+
     //hello-module
-    browserify('./Vue/hello-module.js', { debug: !gulp.env.production })
+    browserify('./Vue/hello-module.js', { debug: !production })
         .transform([babelify, { presets: ['es2015'] }])
         .bundle()
-        .pipe(fs.createWriteStream("./Scripts/hello-module.js"));
+        .pipe(fs.createWriteStream('./Scripts/hello-module.js'));
     //hello-vue-component
-    browserify('./Vue/hello-vue-component.js')
-        .transform([babelify, { presets: ['es2015'] }])
+    browserify('./Vue/hello-vue-component.js', { debug: !production })
         .transform(vueify)
+        .transform([babelify, { presets: ['es2015'] }])
         .bundle()
-        .pipe(fs.createWriteStream("./Scripts/hello-vue-component.js"));
+        .pipe(fs.createWriteStream('./Scripts/hello-vue-component.js'));
+    //vee-validate
+    browserify('./Validation/vee-validate.js', { debug: !production })
+        .transform(vueify)
+        .transform([babelify, { presets: ['es2015'] }])
+        .bundle()
+        .pipe(fs.createWriteStream('./Scripts/vee-validate.js'));
 });

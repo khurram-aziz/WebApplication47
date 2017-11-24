@@ -10,6 +10,7 @@
     "browserify": "^14.5.0",
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
+    "vee-validate": "^2.0.0-rc.23",
     "vue": "^2.5.8",
     "vueify": "^9.4.1"
   }
