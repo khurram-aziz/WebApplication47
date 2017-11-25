@@ -13,6 +13,7 @@
     "gulp": "^3.9.1",
     "vee-validate": "^2.0.0-rc.23",
     "vue": "^2.5.8",
+    "vue-router": "^3.0.1",
     "vueify": "^9.4.1"
   },
   "browserify-shim": {

@@ -39,6 +39,14 @@ gulp.task('copy-files', function () {
         //.external('vue')
         .bundle()
         .pipe(fs.createWriteStream('./Scripts/hello-vue-component.js'));
+    //hello-router
+    browserify('./Vue/hello-router.js', { debug: !production })
+        .transform(vueify)
+        .transform(babelify)
+        .transform(browserifyShim)
+        //.external('vue')
+        .bundle()
+        .pipe(fs.createWriteStream('./Scripts/hello-router.js'));
     //vee-validate
     browserify('./Validation/vee-validate.js', { debug: !production })
         .transform(vueify)

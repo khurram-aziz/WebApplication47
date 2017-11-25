@@ -277,9 +277,11 @@
     <Content Include="Validation\Vee-Validate.aspx" />
     <Content Include="Validation\vee-validate.js" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="Vue\hello-router.js" />
     <Content Include="Vue\hello-vue-component.js" />
     <Content Include="Vue\HelloModule.aspx" />
     <Content Include="Vue\hello-module.js" />
+    <Content Include="Vue\HelloRouter.aspx" />
     <Content Include="Vue\HelloVue.aspx" />
     <Content Include="Vue\HelloVueComponent.aspx" />
     <Content Include="Web.config">
@@ -464,6 +466,13 @@
     <Compile Include="Vue\HelloModule.aspx.designer.cs">
       <DependentUpon>HelloModule.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vue\HelloRouter.aspx.cs">
+      <DependentUpon>HelloRouter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vue\HelloRouter.aspx.designer.cs">
+      <DependentUpon>HelloRouter.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Vue\HelloVue.aspx.cs">
       <DependentUpon>HelloVue.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -487,6 +496,7 @@
     <Content Include="Vue\hello.vue" />
     <Content Include="Validation\vee-validate.vue" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <Content Include="Vue\hello-router.vue" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
