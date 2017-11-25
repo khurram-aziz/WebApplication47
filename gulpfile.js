@@ -28,13 +28,13 @@ gulp.task('copy-files', function () {
 
     //hello-module
     browserify('./Vue/hello-module.js', { debug: !production })
-        .transform([babelify, { presets: ['es2015'] }])
+        .transform(babelify)
         .bundle()
         .pipe(fs.createWriteStream('./Scripts/hello-module.js'));
     //hello-vue-component
     browserify('./Vue/hello-vue-component.js', { debug: !production })
         .transform(vueify)
-        .transform([babelify, { presets: ['es2015'] }])
+        .transform(babelify)
         .transform(browserifyShim) //https://github.com/vuejs/vueify/issues/122, https://github.com/vuejs/vueify/issues/194
         //.external('vue')
         .bundle()
@@ -42,7 +42,7 @@ gulp.task('copy-files', function () {
     //vee-validate
     browserify('./Validation/vee-validate.js', { debug: !production })
         .transform(vueify)
-        .transform([babelify, { presets: ['es2015'] }])
+        .transform(babelify)
         .transform(browserifyShim)
         .bundle()
         .pipe(fs.createWriteStream('./Scripts/vee-validate.js'));
