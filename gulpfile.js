@@ -36,7 +36,7 @@ gulp.task('copy-files', function () {
         .transform(vueify)
         .transform([babelify, { presets: ['es2015'] }])
         .transform(browserifyShim) //https://github.com/vuejs/vueify/issues/122, https://github.com/vuejs/vueify/issues/194
-        .external('vue')
+        //.external('vue')
         .bundle()
         .pipe(fs.createWriteStream('./Scripts/hello-vue-component.js'));
     //vee-validate
