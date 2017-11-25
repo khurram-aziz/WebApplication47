@@ -10,6 +10,6 @@
 namespace WebApplication.Validation {
     
     
-    public partial class Vee_Validate {
+    public partial class VeeValidate {
     }
 }

@@ -274,7 +274,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
-    <Content Include="Validation\Vee-Validate.aspx" />
+    <Content Include="Validation\VeeValidate.aspx" />
     <Content Include="Validation\vee-validate.js" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Vue\hello-router.js" />
@@ -445,12 +445,12 @@
       <DependentUpon>Site.Mobile.Master</DependentUpon>
     </Compile>
     <Compile Include="Startup.cs" />
-    <Compile Include="Validation\Vee-Validate.aspx.cs">
-      <DependentUpon>Vee-Validate.aspx</DependentUpon>
+    <Compile Include="Validation\VeeValidate.aspx.cs">
+      <DependentUpon>VeeValidate.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Validation\Vee-Validate.aspx.designer.cs">
-      <DependentUpon>Vee-Validate.aspx</DependentUpon>
+    <Compile Include="Validation\VeeValidate.aspx.designer.cs">
+      <DependentUpon>VeeValidate.aspx</DependentUpon>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

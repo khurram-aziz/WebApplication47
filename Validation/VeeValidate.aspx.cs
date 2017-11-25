@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace WebApplication.Validation
 {
-    public partial class Vee_Validate : System.Web.UI.Page
+    public partial class VeeValidate : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
