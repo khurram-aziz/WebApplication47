@@ -24,4 +24,10 @@ gulp.task('default', function () {
         .transform(browserifyShim)
         .bundle()
         .pipe(fs.createWriteStream("./Scripts/clock.js")); 
+
+    browserify('./React/tictactoe.js', { debug: !gulp.env.production })
+        .transform([babelify, { presets: ['react'] }])
+        .transform(browserifyShim)
+        .bundle()
+        .pipe(fs.createWriteStream("./Scripts/tictactoe.js")); 
 });
