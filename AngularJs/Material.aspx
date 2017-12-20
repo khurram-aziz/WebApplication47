@@ -18,39 +18,28 @@
 
     <!-- Container #1 (see wireframe) -->
     <md-toolbar layout="row" class="md-toolbar-tools">
-    <md-button class="menu md-icon-button" hide-gt-sm ng-click="app.toggleList()"
-               aria-label="Show User List">
-      <md-icon md-svg-icon="menu"></md-icon>
-    </md-button>
-    <h1>Angular Material - Starter App</h1>
-  </md-toolbar>
+        <md-button class="menu md-icon-button" hide-gt-sm ng-click="app.toggleList()" aria-label="Show User List">
+            <md-icon md-svg-icon="menu"></md-icon>
+        </md-button>
+        <h1>Angular Material - Starter App</h1>
+    </md-toolbar>
 
     <!-- Container #2 -->
     <div flex layout="row">
 
         <!-- Container #3 -->
-        <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')"
-            md-component-id="left" ng-click="app.toggleList()">
-      <!-- Custom UsersList component -->
-      <users-list
-          users="app.users"
-          selected="app.selected"
-          on-selected="app.selectUser(user)">
-      </users-list>
-    </md-sidenav>
+        <md-sidenav class="md-whiteframe-4dp" md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" ng-click="app.toggleList()">
+            <!-- Custom UsersList component -->
+            <users-list users="app.users" selected="app.selected" on-selected="app.selectUser(user)"></users-list>
+        </md-sidenav>
 
         <!-- Container #4 -->
         <md-content flex id="content">
-      <!-- Custom UserDetails component -->
-      <user-details
-          selected="app.selected" >
-      </user-details>
-    </md-content>
-
+            <!-- Custom UserDetails component -->
+            <user-details selected="app.selected"></user-details>
+        </md-content>
     </div>
 
-    <script src="/Scripts/angular.js"></script>
     <script src="/Scripts/material.js"></script>
-
 </body>
 </html>
