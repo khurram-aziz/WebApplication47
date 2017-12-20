@@ -266,7 +266,6 @@
     <Content Include="package.json" />
     <Content Include="bower.json" />
     <None Include=".babelrc" />
-    <Content Include="package-lock.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
@@ -302,6 +301,7 @@
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="Views\web.config" />
+    <Content Include="yarn.lock" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
