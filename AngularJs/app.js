@@ -1,8 +1,7 @@
-// Load libraries
 import angular from 'angular';
-import 'angular-animate';
-import 'angular-aria';
-import 'angular-material';
+//import 'angular-animate';     we can also use commonjs syntax require('angular-animate');
+//import 'angular-aria';        we dont need to include these two libraries; as gulp is now creating the vendor bundle
+import 'angular-material';      //if we dont import this; ngMaterial used below throws error
 
 import AppController from './AppController';
 import Users from './users/Users';

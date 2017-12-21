@@ -40,6 +40,8 @@
         </md-content>
     </div>
 
-    <script src="/Scripts/material.js"></script>
+    <script src="/Scripts/angular.js"></script><!--We need to include angular; due to package.json global shim it is not getting bundled into angular-material-->
+    <script src="/Scripts/angular-material.js"></script>
+    <script src="/Scripts/material-app.js"></script>
 </body>
 </html>
