@@ -259,3 +259,14 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+/bower_components/*
+/Scripts/vue.js
+/Scripts/hello-module.js
+/Scripts/hello-vue-component.js
+/Scripts/vee-validate.js
+/Scripts/hello-router.js
+/Content/vuetify.css.map
+/Content/vuetify.css
+/Scripts/vuetify.js
+/Scripts/vue-bundle.js
+/Scripts/hello-vuetify.js
