@@ -278,3 +278,6 @@ __pycache__/
 /Scripts/vuetify.js
 /Scripts/vue-bundle.js
 /Scripts/hello-vuetify.js
+/Scripts/clock.js
+/Scripts/react.js
+/Scripts/react-dom.js

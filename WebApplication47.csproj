@@ -270,6 +270,10 @@
     <Content Include="package-lock.json" />
     <Content Include=".babelrc" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="React\clock.js" />
+    <Content Include="React\HelloReact.aspx" />
+    <Content Include="React\TicTacToe.aspx" />
+    <Content Include="React\tictactoe.js" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -465,6 +469,20 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="React\HelloReact.aspx.cs">
+      <DependentUpon>HelloReact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="React\HelloReact.aspx.designer.cs">
+      <DependentUpon>HelloReact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="React\TicTacToe.aspx.cs">
+      <DependentUpon>TicTacToe.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="React\TicTacToe.aspx.designer.cs">
+      <DependentUpon>TicTacToe.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
