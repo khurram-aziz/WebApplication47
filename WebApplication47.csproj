@@ -206,6 +206,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include=".gitattributes" />
+    <Content Include=".gitignore" />
     <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
@@ -222,6 +224,29 @@
     <Content Include="Account\ResetPasswordConfirmation.aspx" />
     <Content Include="Account\TwoFactorAuthenticationSignIn.aspx" />
     <Content Include="Account\VerifyPhoneNumber.aspx" />
+    <Content Include="AngularJs\app.css" />
+    <Content Include="AngularJs\app.js" />
+    <Content Include="AngularJs\AppController.js" />
+    <Content Include="AngularJs\boot.js" />
+    <Content Include="AngularJs\Material.aspx" />
+    <Content Include="AngularJs\svg\avatar-1.svg" />
+    <Content Include="AngularJs\svg\avatar-4.svg" />
+    <Content Include="AngularJs\svg\avatars.svg" />
+    <Content Include="AngularJs\svg\google_plus.svg" />
+    <Content Include="AngularJs\svg\hangouts.svg" />
+    <Content Include="AngularJs\svg\mail.svg" />
+    <Content Include="AngularJs\svg\menu.svg" />
+    <Content Include="AngularJs\svg\phone.svg" />
+    <Content Include="AngularJs\svg\share.svg" />
+    <Content Include="AngularJs\svg\twitter.svg" />
+    <Content Include="AngularJs\users\components\details\ContactSheet.html" />
+    <Content Include="AngularJs\users\components\details\UserDetails.html" />
+    <Content Include="AngularJs\users\components\details\UserDetails.js" />
+    <Content Include="AngularJs\users\components\details\UserDetailsController.js" />
+    <Content Include="AngularJs\users\components\list\UsersList.html" />
+    <Content Include="AngularJs\users\components\list\UsersList.js" />
+    <Content Include="AngularJs\users\services\UsersDataService.js" />
+    <Content Include="AngularJs\users\Users.js" />
     <Content Include="Contact.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -292,6 +317,7 @@
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="Views\web.config" />
+    <Content Include="yarn.lock" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
@@ -398,6 +424,13 @@
     </Compile>
     <Compile Include="Account\VerifyPhoneNumber.aspx.designer.cs">
       <DependentUpon>VerifyPhoneNumber.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="AngularJs\Material.aspx.cs">
+      <DependentUpon>Material.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AngularJs\Material.aspx.designer.cs">
+      <DependentUpon>Material.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="About.aspx.cs">

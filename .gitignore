@@ -193,6 +193,7 @@ ClientBin/
 *.pfx
 *.publishsettings
 node_modules/
+bower_components/
 orleans.codegen.cs
 
 # Since there are multiple workflows, uncomment next line to ignore bower_components
@@ -259,14 +260,21 @@ paket-files/
 # Python Tools for Visual Studio (PTVS)
 __pycache__/
 *.pyc
+
 /bower_components/*
+
+/Content/angular-material.css
+/Content/vuetify.css.map
+/Content/vuetify.css
+
+/Scripts/angular.js
+/Scripts/angular-material.js
+/Scripts/material-app.js
 /Scripts/vue.js
 /Scripts/hello-module.js
 /Scripts/hello-vue-component.js
 /Scripts/vee-validate.js
 /Scripts/hello-router.js
-/Content/vuetify.css.map
-/Content/vuetify.css
 /Scripts/vuetify.js
 /Scripts/vue-bundle.js
 /Scripts/hello-vuetify.js
