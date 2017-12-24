@@ -5,17 +5,13 @@ Click here to learn more. https://go.microsoft.com/fwlink/?LinkId=518007
 */
 
 var gulp = require('gulp');
-var gUtil = require('gulp-util'); 
+var gUtil = require('gulp-util');
 var browserify = require('browserify');
 var babelify = require('babelify');
-var browserifyShim = require('browserify-shim'); 
 var fs = require('fs');
-var vueify = require('vueify')
+var vueify = require('vueify');
 
 var production = (process.env.NODE_ENV === 'production'); //gulp.env.production
-
-gulp.task('default', function () {
-    gUtil.log(production ? 'NODE_ENV is production' : 'NODE_ENV is not production'); 
 
 gulp.task('default', function () {
     gUtil.log(production ? 'NODE_ENV is production' : 'NODE_ENV is not production');
@@ -27,61 +23,49 @@ gulp.task('default', function () {
 gulp.task('angularjs-task', function () {
     const vendors = ['angular', 'angular-animate', 'angular-aria', 'angular-material'];
 
-    gulp.src(['./node_modules/angular/angular.js'])
-        .pipe(gulp.dest('./Scripts/'));
     gulp.src(['./node_modules/angular-material/angular-material.css'])
         .pipe(gulp.dest('./Content'));
 
-    var b = browserify({ debug: true });
+    var b = browserify({ debug: !production });
     vendors.forEach(lib => { b.require(lib); });
     b.bundle()
-        .pipe(fs.createWriteStream("./Scripts/angular-material.js"));
+        .pipe(fs.createWriteStream("./Scripts/angularjs-bundle.js"));
 
     browserify('./AngularJs/boot.js', { debug: !production })
         .external(vendors)
         .transform([babelify])
-        .transform(browserifyShim)
+        //.transform(browserifyShim)
         .bundle()
         .pipe(fs.createWriteStream("./Scripts/material-app.js"));
-  });
 });
 
-gulp.task('react-task', function() {
-    gulp.src(['./bower_components/react/react.js', './bower_components/react/react-dom.js']) 
-        .pipe(gulp.dest('./Scripts/'));
+gulp.task('react-task', function () {
+    const vendors = ['react', 'react-dom'];
 
-    browserify('./React/clock.js', { debug: !gulp.env.production })
-        .transform([babelify, { presets: ['react'] }])
-        .transform(browserifyShim)
-        .bundle()
-        .pipe(fs.createWriteStream("./Scripts/clock.js")); 
+    var b = browserify({ debug: !production });
+    vendors.forEach(lib => { b.require(lib); });
+    b.bundle()
+        .pipe(fs.createWriteStream("./Scripts/react-bundle.js"));
 
-    browserify('./React/tictactoe.js', { debug: !gulp.env.production })
-        .transform([babelify, { presets: ['react'] }])
-        .transform(browserifyShim)
-        .bundle()
-        .pipe(fs.createWriteStream("./Scripts/tictactoe.js")); 
+    var reactFiles = [{ folder: './React/', file: 'clock.js' },
+        { folder: './React/', file: 'tictactoe.js' }];
+    reactFiles.forEach(e => {
+        browserify(e.folder + e.file, { debug: !production })
+            .transform([babelify, { presets: ['react'] }])
+            //.transform(browserifyShim)
+            .bundle()
+            .pipe(fs.createWriteStream('./Scripts/' + e.file));
+    });
 });
 
 gulp.task('vue-task', function () {
-    const vueVendors = ['vue', 'vue-router', 'vuetify'];
+    const vendors = ['vue', 'vue-router', 'vuetify'];
 
-    gulp.src(['./node_modules/vue/dist/vue.js'      //we dont need this as it will become part of vendor bundle
-                                                    //but copying it for some initial demo pages
-                                                    //we are also no longer shimming it
-        /*'./node_modules/vuetify/dist/vuetify.js'*/])
-        .pipe(gulp.dest('./Scripts/'));
     gulp.src(['./node_modules/vuetify/dist/vuetify.css', './node_modules/vuetify/dist/vuetify.css.map'])
         .pipe(gulp.dest('./Content/'));
 
-    //hello-module
-    browserify('./Vue/hello-module.js', { debug: !production })
-        .transform(babelify)
-        .bundle()
-        .pipe(fs.createWriteStream('./Scripts/hello-module.js'));
-
     var b = browserify({ debug: !production });
-    vueVendors.forEach(lib => { b.require(lib); });
+    vendors.forEach(lib => { b.require(lib); });
     b.bundle()
         .pipe(fs.createWriteStream('./Scripts/vue-bundle.js'));
 
@@ -91,10 +75,10 @@ gulp.task('vue-task', function () {
         { folder: './Vue/', file: 'hello-vuetify.js' }];
     vueFiles.forEach(e => {
         browserify(e.folder + e.file, { debug: !production })
-            .external(vueVendors)
+            .external(vendors)
             .transform(vueify)
             .transform(babelify)
-            .transform(browserifyShim) //https://github.com/vuejs/vueify/issues/122, https://github.com/vuejs/vueify/issues/194
+            //.transform(browserifyShim) //https://github.com/vuejs/vueify/issues/122, https://github.com/vuejs/vueify/issues/194
             .bundle()
             .pipe(fs.createWriteStream('./Scripts/' + e.file));
     });

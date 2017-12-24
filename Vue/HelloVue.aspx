@@ -4,7 +4,7 @@
         Your Name: <input type="text" v-model="boundName" /><br />
         <button v-on:click="toggle($event)">Toggle</button>{{ message }}
     </div>
-    <script src="/Scripts/vue.js"></script>
+    <script src="/Scripts/vue-bundle.js"></script>
     <script type="text/javascript">
         var app = new Vue({
             el: '#app',

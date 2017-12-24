@@ -267,17 +267,17 @@ __pycache__/
 /Content/vuetify.css.map
 /Content/vuetify.css
 
-/Scripts/angular.js
-/Scripts/angular-material.js
+/Scripts/angularjs-bundle.js
+/Scripts/react-bundle.js
+/Scripts/vue-bundle.js
+
 /Scripts/material-app.js
-/Scripts/vue.js
-/Scripts/hello-module.js
+
+/Scripts/clock.js
+/Scripts/tictactoe.js
+
 /Scripts/hello-vue-component.js
 /Scripts/vee-validate.js
 /Scripts/hello-router.js
 /Scripts/vuetify.js
-/Scripts/vue-bundle.js
 /Scripts/hello-vuetify.js
-/Scripts/clock.js
-/Scripts/react.js
-/Scripts/react-dom.js

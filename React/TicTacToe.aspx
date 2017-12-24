@@ -87,7 +87,6 @@
             }
         })(console.error);
     </script>
-    <script src="/Scripts/react.js"></script>
-    <script src="/Scripts/react-dom.js"></script>
+    <script src="/Scripts/react-bundle.js"></script>
     <script src="/Scripts/tictactoe.js"></script>
 </asp:Content>

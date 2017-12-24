@@ -206,8 +206,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitattributes" />
-    <Content Include=".gitignore" />
     <Content Include="About.aspx" />
     <Content Include="Account\AddPhoneNumber.aspx" />
     <Content Include="Account\Confirm.aspx" />
@@ -267,7 +265,6 @@
     <Content Include="bower.json" />
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
-    <Content Include="package-lock.json" />
     <Content Include=".babelrc" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="React\clock.js" />
@@ -308,8 +305,6 @@
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Vue\hello-router.js" />
     <Content Include="Vue\hello-vue-component.js" />
-    <Content Include="Vue\HelloModule.aspx" />
-    <Content Include="Vue\hello-module.js" />
     <Content Include="Vue\HelloRouter.aspx" />
     <Content Include="Vue\HelloVue.aspx" />
     <Content Include="Vue\HelloVueComponent.aspx" />
@@ -321,7 +316,6 @@
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />
     <Content Include="Views\web.config" />
-    <Content Include="yarn.lock" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Account\AddPhoneNumber.aspx.cs">
@@ -511,13 +505,6 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Vue\HelloModule.aspx.cs">
-      <DependentUpon>HelloModule.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Vue\HelloModule.aspx.designer.cs">
-      <DependentUpon>HelloModule.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vue\HelloRouter.aspx.cs">
       <DependentUpon>HelloRouter.aspx</DependentUpon>
