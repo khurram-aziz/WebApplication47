@@ -284,6 +284,8 @@
     <Content Include="Vue\HelloRouter.aspx" />
     <Content Include="Vue\HelloVue.aspx" />
     <Content Include="Vue\HelloVueComponent.aspx" />
+    <Content Include="Vue\HelloVuetify.aspx" />
+    <Content Include="Vue\hello-vuetify.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
@@ -487,6 +489,13 @@
     <Compile Include="Vue\HelloVueComponent.aspx.designer.cs">
       <DependentUpon>HelloVueComponent.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Vue\HelloVuetify.aspx.cs">
+      <DependentUpon>HelloVuetify.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vue\HelloVuetify.aspx.designer.cs">
+      <DependentUpon>HelloVuetify.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -497,6 +506,7 @@
     <Content Include="Validation\vee-validate.vue" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Vue\hello-router.vue" />
+    <Content Include="Vue\hello-vuetify.vue" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

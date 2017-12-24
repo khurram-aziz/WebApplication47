@@ -2,6 +2,11 @@
   "version": "1.0.0",
   "name": "asp.net",
   "private": true,
+  "dependencies": {
+    "vue": "^2.5.8",
+    "vuetify": "^0.17.5",
+    "vue-router": "^3.0.1"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-plugin-transform-runtime": "^6.23.0",
@@ -12,11 +17,8 @@
     "fs": "0.0.1-security",
     "gulp": "^3.9.1",
     "vee-validate": "^2.0.0-rc.23",
-    "vue": "^2.5.8",
-    "vue-router": "^3.0.1",
     "vueify": "^9.4.1"
   },
   "browserify-shim": {
-    "vue": "global:Vue"
   }
 }
