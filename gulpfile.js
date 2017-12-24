@@ -51,6 +51,7 @@ gulp.task('react-task', function () {
         { folder: './React/', file: 'tictactoe.js' }];
     reactFiles.forEach(e => {
         browserify(e.folder + e.file, { debug: !production })
+            .external(vendors)
             .transform([babelify, { presets: ['react'] }])
             //.transform(browserifyShim)
             .bundle()

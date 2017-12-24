@@ -56,6 +56,9 @@
     <div id="errors" style="background: #c00; color: #fff; display: none; margin: -20px -20px 20px; padding: 20px; white-space: pre-wrap;">
     </div>
     <div id="root"></div>
+    <script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+    <script src="/Scripts/react-bundle.js"></script>
+    <script src="/Scripts/tictactoe.js"></script>
     <script>
         window.addEventListener('mousedown', function (e) {
             e.preventDefault();
@@ -87,6 +90,4 @@
             }
         })(console.error);
     </script>
-    <script src="/Scripts/react-bundle.js"></script>
-    <script src="/Scripts/tictactoe.js"></script>
 </asp:Content>

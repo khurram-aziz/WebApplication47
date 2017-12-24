@@ -266,6 +266,7 @@
     <Content Include=".gitattributes" />
     <Content Include=".gitignore" />
     <Content Include=".babelrc" />
+    <Content Include="package-lock.json" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="React\clock.js" />
     <Content Include="React\HelloReact.aspx" />
