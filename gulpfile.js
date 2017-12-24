@@ -12,10 +12,14 @@ var browserifyShim = require('browserify-shim');
 var fs = require('fs');
 
 var production = (process.env.NODE_ENV === 'production'); //gulp.env.production
-const vendors = ['angular', 'angular-animate', 'angular-aria', 'angular-material'];
 
 gulp.task('default', function () {
     gUtil.log(production ? 'NODE_ENV is production' : 'NODE_ENV is not production');
+    gulp.start('angularjs-task');
+});
+
+gulp.task('angularjs-task', function () {
+    const vendors = ['angular', 'angular-animate', 'angular-aria', 'angular-material'];
 
     gulp.src(['./node_modules/angular/angular.js'])
         .pipe(gulp.dest('./Scripts/'));
