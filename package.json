@@ -8,12 +8,13 @@
     "angular-aria": "^1.6.7",
     "angular-material": "^1.1.5",
     "angular-messages": "^1.6.7",
+    "material-ui": "^0.20.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "vue": "^2.5.8",
     "vee-validate": "^2.0.0-rc.23",
-    "vuetify": "^0.17.5",
-    "vue-router": "^3.0.1"
+    "vue": "^2.5.8",
+    "vue-router": "^3.0.1",
+    "vuetify": "^0.17.5"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",

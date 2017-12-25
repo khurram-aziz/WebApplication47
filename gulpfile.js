@@ -48,7 +48,8 @@ gulp.task('react-task', function () {
         .pipe(fs.createWriteStream("./Scripts/react-bundle.js"));
 
     var reactFiles = [{ folder: './React/', file: 'clock.js' },
-        { folder: './React/', file: 'tictactoe.js' }];
+        { folder: './React/', file: 'tictactoe.js' },
+        { folder: './React/', file: 'material-ui-app.js' }];
     reactFiles.forEach(e => {
         browserify(e.folder + e.file, { debug: !production })
             .external(vendors)
