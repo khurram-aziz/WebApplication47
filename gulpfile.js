@@ -5,29 +5,35 @@ Click here to learn more. https://go.microsoft.com/fwlink/?LinkId=518007
 */
 
 var gulp = require('gulp');
-var gUtil = require('gulp-util'); 
+var gUtil = require('gulp-util');
 var browserify = require('browserify');
 var babelify = require('babelify');
-var browserifyShim = require('browserify-shim'); 
 var fs = require('fs');
 
-var production = (process.env.NODE_ENV === 'production');
+var production = (process.env.NODE_ENV === 'production'); //gulp.env.production
 
 gulp.task('default', function () {
-    gUtil.log(production ? 'NODE_ENV is production' : 'NODE_ENV is not production'); 
+    gUtil.log(production ? 'NODE_ENV is production' : 'NODE_ENV is not production');
+    gulp.start('react-task');
+});
 
-    gulp.src(['./bower_components/react/react.js', './bower_components/react/react-dom.js']) 
-        .pipe(gulp.dest('./Scripts/'));
+gulp.task('react-task', function () {
+    const vendors = ['react', 'react-dom'];
 
-    browserify('./React/clock.js', { debug: !gulp.env.production })
-        .transform([babelify, { presets: ['react'] }])
-        .transform(browserifyShim)
-        .bundle()
-        .pipe(fs.createWriteStream("./Scripts/clock.js")); 
+    var b = browserify({ debug: !production });
+    vendors.forEach(lib => { b.require(lib); });
+    b.bundle()
+        .pipe(fs.createWriteStream("./Scripts/react-bundle.js"));
 
-    browserify('./React/tictactoe.js', { debug: !gulp.env.production })
-        .transform([babelify, { presets: ['react'] }])
-        .transform(browserifyShim)
-        .bundle()
-        .pipe(fs.createWriteStream("./Scripts/tictactoe.js")); 
+    var reactFiles = [{ folder: './React/', file: 'clock.js' },
+        { folder: './React/', file: 'tictactoe.js' },
+        { folder: './React/', file: 'material-ui-app.js' }];
+    reactFiles.forEach(e => {
+        browserify(e.folder + e.file, { debug: !production })
+            .external(vendors)
+            .transform([babelify, { presets: ['react'] }])
+            //.transform(browserifyShim)
+            .bundle()
+            .pipe(fs.createWriteStream('./Scripts/' + e.file));
+    });
 });
