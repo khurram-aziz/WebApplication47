@@ -275,6 +275,7 @@ __pycache__/
 
 /Scripts/clock.js
 /Scripts/material-ui-app.js
+/Scripts/redux-conunter.js
 /Scripts/tictactoe.js
 
 /Scripts/hello-vue-component.js

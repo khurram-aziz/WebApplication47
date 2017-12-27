@@ -248,6 +248,8 @@
     <Content Include="React\HelloReact.aspx" />
     <Content Include="React\material-ui-app.js" />
     <Content Include="React\MaterialUI.aspx" />
+    <Content Include="React\redux-conunter.js" />
+    <Content Include="React\ReduxCounter.aspx" />
     <Content Include="React\TicTacToe.aspx" />
     <Content Include="React\tictactoe.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -433,9 +435,17 @@
     </Compile>
     <Compile Include="React\MaterialUI.aspx.cs">
       <DependentUpon>MaterialUI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="React\MaterialUI.aspx.designer.cs">
       <DependentUpon>MaterialUI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="React\ReduxCounter.aspx.cs">
+      <DependentUpon>ReduxCounter.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="React\ReduxCounter.aspx.designer.cs">
+      <DependentUpon>ReduxCounter.aspx</DependentUpon>
     </Compile>
     <Compile Include="React\TicTacToe.aspx.cs">
       <DependentUpon>TicTacToe.aspx</DependentUpon>

@@ -18,7 +18,7 @@ gulp.task('default', function () {
 });
 
 gulp.task('react-task', function () {
-    const vendors = ['react', 'react-dom'];
+    const vendors = ['react', 'react-dom', 'redux'];
 
     var b = browserify({ debug: !production });
     vendors.forEach(lib => { b.require(lib); });
@@ -27,7 +27,8 @@ gulp.task('react-task', function () {
 
     var reactFiles = [{ folder: './React/', file: 'clock.js' },
         { folder: './React/', file: 'tictactoe.js' },
-        { folder: './React/', file: 'material-ui-app.js' }];
+        { folder: './React/', file: 'material-ui-app.js' },
+        { folder: './React/', file: 'redux-conunter.js' }];
     reactFiles.forEach(e => {
         browserify(e.folder + e.file, { debug: !production })
             .external(vendors)
