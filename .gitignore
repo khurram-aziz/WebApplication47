@@ -274,7 +274,10 @@ __pycache__/
 /Scripts/material-app.js
 
 /Scripts/clock.js
+/Scripts/material-ui-app.js
+/Scripts/redux-conunter.js
 /Scripts/tictactoe.js
+/Scripts/redux-todo.js
 
 /Scripts/hello-vue-component.js
 /Scripts/vee-validate.js
