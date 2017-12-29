@@ -1,7 +1,7 @@
-﻿import React, { Component } from 'react'
-import ReactDOM from 'react-dom'
-import PropTypes from 'prop-types'
-import { createStore } from 'redux'
+﻿import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import PropTypes from 'prop-types';
+import { createStore } from 'redux';
 
 function counter(state = 0, action) {
     switch (action.type) {
@@ -13,8 +13,6 @@ function counter(state = 0, action) {
             return state
     }
 }
-
-const store = createStore(counter);
 
 class Counter extends Component {
     constructor(props) {
@@ -57,6 +55,8 @@ Counter.propTypes = {
     onDecrement: PropTypes.func.isRequired
 }
 
+const store = createStore(counter);
+
 const render = () => ReactDOM.render(
     <Counter
         value={store.getState()}
@@ -66,5 +66,5 @@ const render = () => ReactDOM.render(
     document.getElementById('app')
 );
 
-render()
-store.subscribe(render)
+render();
+store.subscribe(render);

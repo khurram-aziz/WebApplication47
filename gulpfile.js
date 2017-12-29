@@ -28,7 +28,8 @@ gulp.task('react-task', function () {
     var reactFiles = [{ folder: './React/', file: 'clock.js' },
         { folder: './React/', file: 'tictactoe.js' },
         { folder: './React/', file: 'material-ui-app.js' },
-        { folder: './React/', file: 'redux-conunter.js' }];
+        { folder: './React/', file: 'redux-conunter.js' },
+        { folder: './React/', file: 'redux-todo.js' }];
     reactFiles.forEach(e => {
         browserify(e.folder + e.file, { debug: !production })
             .external(vendors)
