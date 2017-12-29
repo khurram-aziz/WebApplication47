@@ -244,10 +244,13 @@
     <Content Include="bower.json" />
     <Content Include=".babelrc" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="React\actions\todo-actions.js" />
     <Content Include="React\clock.js" />
+    <Content Include="React\components\todo-components.js" />
     <Content Include="React\HelloReact.aspx" />
     <Content Include="React\material-ui-app.js" />
     <Content Include="React\MaterialUI.aspx" />
+    <Content Include="React\reducers\todo-reducers.js" />
     <Content Include="React\redux-conunter.js" />
     <Content Include="React\redux-todo.js" />
     <Content Include="React\ReduxCounter.aspx" />
