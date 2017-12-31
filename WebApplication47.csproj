@@ -244,17 +244,22 @@
     <Content Include="bower.json" />
     <Content Include=".babelrc" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="React\actions\saleOrder-actions.js" />
     <Content Include="React\actions\todo-actions.js" />
     <Content Include="React\clock.js" />
+    <Content Include="React\components\saleOrder-components.js" />
+    <Content Include="React\saleorders-app.js" />
     <Content Include="React\components\todo-components.js" />
     <Content Include="React\HelloReact.aspx" />
     <Content Include="React\material-ui-app.js" />
     <Content Include="React\MaterialUI.aspx" />
+    <Content Include="React\reducers\saleOrder-reducers.js" />
     <Content Include="React\reducers\todo-reducers.js" />
     <Content Include="React\redux-conunter.js" />
     <Content Include="React\redux-todo.js" />
     <Content Include="React\ReduxCounter.aspx" />
     <Content Include="React\ReduxTodo.aspx" />
+    <Content Include="React\SaleOrders.aspx" />
     <Content Include="React\TicTacToe.aspx" />
     <Content Include="React\tictactoe.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -458,6 +463,13 @@
     </Compile>
     <Compile Include="React\ReduxTodo.aspx.designer.cs">
       <DependentUpon>ReduxTodo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="React\SaleOrders.aspx.cs">
+      <DependentUpon>SaleOrders.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="React\SaleOrders.aspx.designer.cs">
+      <DependentUpon>SaleOrders.aspx</DependentUpon>
     </Compile>
     <Compile Include="React\TicTacToe.aspx.cs">
       <DependentUpon>TicTacToe.aspx</DependentUpon>

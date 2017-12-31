@@ -29,7 +29,8 @@ gulp.task('react-task', function () {
         { folder: './React/', file: 'tictactoe.js' },
         { folder: './React/', file: 'material-ui-app.js' },
         { folder: './React/', file: 'redux-conunter.js' },
-        { folder: './React/', file: 'redux-todo.js' }];
+        { folder: './React/', file: 'redux-todo.js' },
+        { folder: './React/', file: 'saleorders-app.js' }];
     reactFiles.forEach(e => {
         browserify(e.folder + e.file, { debug: !production })
             .external(vendors)
