@@ -73,7 +73,7 @@ class SaleOrderListItem extends Component{
         return (
             <li className="table-view-cell media">
                 <Link to={"/Detail/" + this.props.saleOrder.number}>
-                    <i class="material-icons md-48">face</i>
+                    <i className="material-icons md-48">face</i>
                     {this.props.saleOrder.userName} ({this.props.saleOrder.number})
                 </Link>
             </li>
@@ -157,7 +157,7 @@ class HomePage extends Component {
     componentDidMount() {
         var self = this;
         this.props.service.saleOrdersLoaded = function (data) {
-            console.log('saleOrdersLoaded');
+            console.log('HomePage :: saleOrdersLoaded(', data, ')');
             self.setState({ searchKey: '', saleOrders: data });
         };
     }

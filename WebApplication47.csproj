@@ -260,6 +260,7 @@
     <Content Include="React\ReduxCounter.aspx" />
     <Content Include="React\ReduxTodo.aspx" />
     <Content Include="React\SaleOrders.aspx" />
+    <Content Include="React\saleOrderService.js" />
     <Content Include="React\TicTacToe.aspx" />
     <Content Include="React\tictactoe.js" />
     <Content Include="Scripts\bootstrap.js" />
