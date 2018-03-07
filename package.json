@@ -13,9 +13,7 @@
     "react-dom": "^16.2.0",
     "react-redux": "^5.0.6",
     "react-router-dom": "^4.2.2",
-    "redux": "^3.7.2"
     "redux": "^3.7.2",
-    "react-redux": "^5.0.6",
     "vee-validate": "^2.0.0-rc.23",
     "vue": "^2.5.8",
     "vue-router": "^3.0.1",
