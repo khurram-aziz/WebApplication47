@@ -5,7 +5,7 @@ Click here to learn more. https://go.microsoft.com/fwlink/?LinkId=518007
 */
 
 var gulp = require('gulp');
-var gUtil = require('gulp-util');
+var log = require('fancy-log');
 var browserify = require('browserify');
 var babelify = require('babelify');
 var fs = require('fs');
@@ -13,11 +13,12 @@ var vueify = require('vueify');
 
 var production = (process.env.NODE_ENV === 'production'); //gulp.env.production
 
-gulp.task('default', function () {
-    gUtil.log(production ? 'NODE_ENV is production' : 'NODE_ENV is not production');
-    gulp.start('angularjs-task');
-    gulp.start('react-task');
-    gulp.start('vue-task');
+gulp.task('default', function (done) {
+    log(production ? 'NODE_ENV is production' : 'NODE_ENV is not production');
+    gulp.task('angularjs-task')();
+    gulp.task('react-task')();
+    gulp.task('vue-task')();
+    done();
 });
 
 gulp.task('angularjs-task', function () {
